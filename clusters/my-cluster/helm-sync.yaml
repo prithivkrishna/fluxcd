@@ -1,14 +1,15 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: k10
   namespace: kasten-io
 spec:
+  interval: 10m
   chart:
     spec:
+      chart: ./clusters/my-cluster/k10
       sourceRef:
         kind: GitRepository
-        name: flux-system
+        name: lux-system
         namespace: flux-system
-      path: ./clusters/my-cluster/k10
-  interval: 5m
+      interval: 10m
