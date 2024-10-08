@@ -7,7 +7,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: ./clusters/my-cluster/k10
+      chart: ./k10
       sourceRef:
         kind: GitRepository
         name: lux-system
