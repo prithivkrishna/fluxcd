@@ -10,6 +10,6 @@ spec:
       chart: ./clusters/my-cluster/k10
       sourceRef:
         kind: GitRepository
-        name: lux-system
+        name: flux-system
         namespace: flux-system
       interval: 10m
